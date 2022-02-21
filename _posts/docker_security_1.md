@@ -1,6 +1,6 @@
 # Docker Security - Part 1 (Build Time security)
 
-In this blog, we will be looking into docker container build time security. I will be covering the following points in this blog
+In this blog, we will be looking into docker container build time security. I will be covering the following points breifly in this blog
 - Deamonless Builds
 - Docker file security
 - Storing and deploying images

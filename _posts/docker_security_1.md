@@ -59,9 +59,9 @@ dastardly deeds on that host.
 		
 	## Storing and deploying images
 	Once images are built, these needs to be stored in a registry. If any attacker can replace or modify container, it can lead to arbitrary code execution therefore it is important to control access to these registries.
-		1. Running own registry
+	1. Running own registry
 		Many organizations run their own registries or use a managed registry like [Docker Hub](https://www.docker.com/pricing). In both cases, access must be audited and controlled.
-		2. Signing images
+	2. Signing images
 		Image signing is where an organization can sign their image before they push it to the container, so that the customer can use it safely. Signing is a way to prove that the image has not been tampered with. If someone make changes to the image, the signature also changes thereby invalidating the image. [Docker content trust](https://docs.docker.com/engine/security/trust/) provides a way to use digital signatures to verify the integrity of an image.
 
 

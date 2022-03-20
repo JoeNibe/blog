@@ -38,7 +38,8 @@ img is a standalone, daemon-less, unprivileged Dockerfile and OCI compatible con
 	
 ## Docker file security
 
-![docker2.webp](:/cdc1042b867e455aad17ef1bd9bade53)
+![docker2](https://user-images.githubusercontent.com/26259187/159152212-e21a2c93-b3f7-48ab-80ef-64afb55be2ce.png)
+
 
 Dockerfile consists of instructions to build a container image. These can also be used to perform various operations on the image such as installing packages, copy file from the local system etc. An attacker with access to Dockerfile can perform malicious actions such as adding malware to the image, accessing build secrets, enumerating network topology, attacking the build host machine etc. This shows that Dockerfiles need proper access controls. Here are some ways to secure the docker file 
 1. Base Image

@@ -49,12 +49,12 @@ Dockerfile consists of instructions to build a container image. These can also b
 3. Non-root User
 		     The USER instruction in a Dockerfile specifies that the default user identity for running containers based on this image is not root. If you don’t want all your containers running as root, specify a non-root user in all your Dockerfiles.
 4. RUN commands
-		A Dockerfile RUN command can be used to run any arbitrary command. If a dockerfile is compromised, an attacker can run any code using this command. Ensure that access to dockerfile is limited and close attention is paid to code reviewing any changes made.
+A Dockerfile RUN command can be used to run any arbitrary command. If a dockerfile is compromised, an attacker can run any code using this command. Ensure that access to dockerfile is limited and close attention is paid to code reviewing any changes made.
 5. Volume Mounts
-		    Using the -v option, you can mount a host directory into a container so that it is available from the container. And there is nothing to stop you from mounting the host’s root directory into a container. An attacker who compromises this container is root on the host, with full access to the entire host filesystem. Some examples include 
-- Mounting /etc would permit modifying the host’s /etc/passwd file from within the container, or messing with cron jobs, or init, or systemd. 
-- Mounting /bin or similar directories such as /usr/bin or /usr/sbin would allow the container to write executables into the host directory—including overwriting existing executables. 
-- Mounting host log directories into a container could enable an attacker to modify the logs to erase traces of them dastardly deeds on that host.
+Using the -v option, you can mount a host directory into a container so that it is available from the container. And there is nothing to stop you from mounting the host’s root directory into a container. An attacker who compromises this container is root on the host, with full access to the entire host filesystem. Some examples include 
+  - Mounting /etc would permit modifying the host’s /etc/passwd file from within the container, or messing with cron jobs, or init, or systemd. 
+  - Mounting /bin or similar directories such as /usr/bin or /usr/sbin would allow the container to write executables into the host directory, including overwriting existing executables. 
+  - Mounting host log directories into a container could enable an attacker to modify the logs to erase traces of them dastardly deeds on that host.
 6. Secrets in Dockerfile
 		Avoid using credentials, passwords, or any secrets in the Dokcerfile. One safe way is to pass the secret during buildtime. Buildkit has -- a secret flag that can be used. Refer to [this](https://www.gasparevitta.com/posts/advanced-docker-secrets-buildkit/) blog for an example of how this can be implemented. Another method is to use the [docker secrets](https://docs.docker.com/engine/swarm/secrets/) , but this requries the docker to be in [swarm](https://docs.docker.com/engine/swarm/) mode.
 7. Avoid setuid binaries

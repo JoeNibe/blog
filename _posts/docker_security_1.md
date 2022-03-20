@@ -1,8 +1,7 @@
 # Docker Security - Part 1 (Build Time security)
 
 
-![docker3](https://user-images.githubusercontent.com/26259187/159152078-ce927a38-00df-4b42-98c0-82d033cb4af2.jpg)
-
+![docker](https://user-images.githubusercontent.com/26259187/159152169-ef7f3825-8288-461f-b00d-94697e88ee6c.jpg)
 
 Containers have seen widespread adoption across the Tech industry.  They provide a lightweight method of packaging and deploying applications in a standardized way across many different types of infrastructure. These goals make containers an attractive option for both developers and operations professionals. Almost every company has started adopting containers for deploying microservices. This introduces the need for introducing controls for securing these containers against threat actors. Container security involves defining and adhering to build, deployment, and runtime practices that protect a container from the applications they support to the infrastructure they rely on. Security teams are challenged to develop container security solutions that facilitate these infrastructure shifts.
 

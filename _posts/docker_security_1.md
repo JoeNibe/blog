@@ -1,7 +1,7 @@
 # Docker Security - Part 1 (Build Time security)
 
 
-![docker.jpg](:/ab424584fb244734a7e108dcdfb69bfb)
+![docker](https://user-images.githubu![docker3](https://user-images.githubusercontent.com/26259187/159152078-ce927a38-00df-4b42-98c0-82d033cb4af2.jpg)
 
 
 Containers have seen widespread adoption across the Tech industry.  They provide a lightweight method of packaging and deploying applications in a standardized way across many different types of infrastructure. These goals make containers an attractive option for both developers and operations professionals. Almost every company has started adopting containers for deploying microservices. This introduces the need for introducing controls for securing these containers against threat actors. Container security involves defining and adhering to build, deployment, and runtime practices that protect a container from the applications they support to the infrastructure they rely on. Security teams are challenged to develop container security solutions that facilitate these infrastructure shifts.
@@ -18,8 +18,7 @@ Readers are expected to have a basic understanding of containers. If you are not
 
 ## Deamonless Builds:
 
-
-![docker3.jpg](:/cd731675b2984c14861050531c418004)
+![docker3](https://user-images.githubusercontent.com/26259187/159152117-f42f5bbd-b43e-4347-846c-de0c54ee32ef.jpg)
 
 
 Docker is one of the most prevalent ways to build and run a container. Running docker commands send an API request to the Docker daemon via Docker socket which then does all the heavy lifting. Any program with access to Docker daemon can send API requests to the daemon. If your organization uses a dedicated machine to build container images, then any user who can trigger a docker build on the machine can also perform a docker run to execute any command on the machine. Docker is also an uncomplicated way to escalate privileges on a compromised system. 
@@ -64,7 +63,7 @@ Dockerfile consists of instructions to build a container image. These can also b
 ## Storing and deploying images
 
 
-![docker4.png](:/f0e74924f39041c1a3436301d6fc4cdf)
+![docker4](https://user-images.githubusercontent.com/26259187/159152130-c84a527c-800a-4f88-8701-5322c105d8da.png)
 
 
 Once images are built, these need to be stored in a registry. If any attacker can replace or modify container, it can lead to arbitrary code execution therefore it is important to control access to these registries. 

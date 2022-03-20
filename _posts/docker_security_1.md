@@ -72,6 +72,7 @@ Once images are built, these need to be stored in a registry. If any attacker ca
 2. Signing images
 		Image signing is where an organization can sign their image before they push it to the container, so that the customer can use it safely. Signing is a way to prove that the image has not been tampered with. If someone makes changes to the image, the signature also changes thereby invalidating the image. [Docker content trust](https://docs.docker.com/engine/security/trust/) provides a way to use digital signatures to verify the integrity of an image.
 
+With that we conclude the attack surface related to build time security. Please stay tuned for part 2, in which we will be covering container isolation and network security.
 
 ## References
 - https://www.freecodecamp.org/news/demystifying-containers-101-a-deep-dive-into-container-technology-for-beginners-d7b60d8511c1/
